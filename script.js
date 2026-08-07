@@ -14,13 +14,43 @@ menuToggle.addEventListener("click", () => {
 
 });
 
-// Close Menu After Clicking Any Link
+// Close Menu + Smooth Scroll
 
-navItems.forEach(link => {
+navItems.forEach(link=>{
 
-    link.addEventListener("click", () => {
+    link.addEventListener("click",function(e){
 
-      navMenu.classList.remove("active");
+        const href=this.getAttribute("href");
+
+        if(href.startsWith("#")){
+
+            e.preventDefault();
+
+            navMenu.classList.remove("active");
+
+            const target=document.querySelector(href);
+
+            if(target){
+
+                setTimeout(()=>{
+
+                    target.scrollIntoView({
+
+                        behavior:"smooth",
+
+                        block:"start"
+
+                    });
+
+                },250);
+
+            }
+
+        }else{
+
+            navMenu.classList.remove("active");
+
+        }
 
     });
 
