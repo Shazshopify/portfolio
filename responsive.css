@@ -289,7 +289,51 @@
 .project-hero p{
 
     font-size:17px;
-
 }
+}
+/* ==========================================
+   MOBILE TESTIMONIAL SLIDER
+========================================== */
+
+@media (max-width: 768px) {
+
+    .testimonial-grid {
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+
+        overflow-x: auto !important;
+        overflow-y: hidden !important;
+
+        gap: 20px !important;
+
+        width: 100% !important;
+
+        scroll-behavior: smooth;
+
+        scroll-snap-type: x mandatory;
+
+        scrollbar-width: none;
+
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .testimonial-grid::-webkit-scrollbar {
+        display: none;
+    }
+
+    .testimonial-card {
+        flex: 0 0 100% !important;
+
+        width: 100% !important;
+        min-width: 100% !important;
+        max-width: 100% !important;
+
+        box-sizing: border-box !important;
+
+        scroll-snap-align: start;
+
+        padding: 30px 25px !important;
+    }
 
 }
