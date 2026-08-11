@@ -179,7 +179,7 @@ let current = 0;
 
 const cards = document.querySelectorAll(".testimonial-card");
 
-const cardWidth = cards[0].offsetWidth + 30;
+const cardWidth = cards[0].offsetWidth + 20;
 
 function updateSlider(){
 
